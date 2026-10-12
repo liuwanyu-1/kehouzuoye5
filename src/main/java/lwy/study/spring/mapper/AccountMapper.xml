@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lwy.study.spring.mapper.AccountMapper">
+
+    <update id="updateMoneyById">
+        UPDATE account SET money = #{money} WHERE id = #{id}
+    </update>
+
+    <select id="selectById" resultType="lwy.study.spring.vo.Account">
+        SELECT id, name, money FROM account WHERE id = #{id}
+    </select>
+
+</mapper>
